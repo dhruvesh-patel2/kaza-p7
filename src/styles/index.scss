@@ -1,0 +1,71 @@
+// FONT //
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+// VARIABLES //
+
+// COLORS
+
+$white: #ffffff;
+$red: #ff6060;
+$dark: #f6f6f6;
+$light: #f6f6f673;
+$black: #000;
+
+// MIXINS
+
+@mixin Reset {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  object-fit: cover;
+  scroll-behavior: smooth;
+}
+
+@mixin break {
+  display: flex;
+}
+
+@mixin h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: $white;
+}
+
+@mixin h2 {
+  font-size: 1.2rem;
+  color: $white;
+}
+
+@mixin center_row_center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin center_column_center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin center_space_between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin center_flex_end {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+@mixin center_column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
