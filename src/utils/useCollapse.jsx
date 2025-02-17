@@ -1,4 +1,4 @@
-/* eslint-disable react-refresh/only-export-components */
+// useCollapse.jsx
 import PropTypes from "prop-types";
 import { createContext, useContext, useState } from "react";
 
@@ -7,10 +7,17 @@ const CollapseContext = createContext();
 const useCollapse = () => useContext(CollapseContext);
 
 const CollapseProvider = ({ children }) => {
-  const [isActive, setIsActive] = useState(0);
+  const [activeCollapsibles, setActiveCollapsibles] = useState({});
+
+  const toggleCollapse = (title) => {
+    setActiveCollapsibles((prevState) => ({
+      ...prevState,
+      [title]: !prevState[title], // toggle l'état
+    }));
+  };
 
   return (
-    <CollapseContext.Provider value={{ isActive, setIsActive }}>
+    <CollapseContext.Provider value={{ activeCollapsibles, toggleCollapse }}>
       {children}
     </CollapseContext.Provider>
   );

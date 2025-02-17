@@ -1,7 +1,7 @@
 import { useNavigate, useParams } from "react-router-dom";
-import Carrousel from "../components/Carrousel/Carrousel";
-import Description from "../components/Description/Description";
-import { useFetch } from "../utils/useFetch";
+import Carrousel from "../../components/Carrousel/Carrousel";
+import Description from "../../components/Description/Description";
+import { useFetch } from "../../utils/useFetch";
 
 const Housing = () => {
   const { fetchedData, isLoading, error } = useFetch(`/data.json`);

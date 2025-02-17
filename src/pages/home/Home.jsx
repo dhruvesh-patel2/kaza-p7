@@ -1,10 +1,9 @@
-import bannerHome from "../assets/images/banner.webp";
-import BannerAbout from "../components/Banner/Banner";
-import Cards from "../components/Cards/Cards";
+import bannerHome from "../../assets/images/banner.webp";
+import BannerAbout from "../../components/Banner/Banner";
+import Cards from "../../components/Cards/Cards";
 
 const Home = () => {
   document.title = "Kasa - Location d'appartement";
-
   return (
     <>
       <main>
@@ -24,5 +23,4 @@ const Home = () => {
     </>
   );
 };
-
 export default Home;

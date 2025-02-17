@@ -1,20 +1,21 @@
 /* eslint-disable react/no-unescaped-entities */
 import { Link } from "react-router-dom";
-import "./error.scss";
+import "./notFound.scss"; // Import correct du fichier SCSS
 
-const Error = () => {
+const NotFound = () => {
+  document.title = "Kasa - Page introuvable";
+
   return (
-    <section className="error_container">
+    <main className="error_container">
       <h1 className="error_title">404</h1>
       <p className="error_text">
-        Oups! La page que{" "}
-        <span className="break">vous demandez n'existe pas.</span>
+        Oups! La page que <span className="break">vous demandez n'existe pas.</span>
       </p>
       <Link to="/" className="error_link">
         Retourner sur la page d'accueil
       </Link>
-    </section>
+    </main>
   );
 };
 
-export default Error;
+export default NotFound;

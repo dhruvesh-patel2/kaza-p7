@@ -1,11 +1,13 @@
-import imageNeige from "../assets/images/banner_about.webp";
-import Banner from "../components/Banner/Banner";
-import Collapse from "../components/Collapse/Collapse";
-import { useCollapse } from "../utils/useCollapse";
+// About.jsx
+import imageNeige from "../../assets/images/banner_about.webp";
+import Banner from "../../components/Banner/Banner";
+import Collapse from "../../components/Collapse/Collapse";
+import { useCollapse } from "../../utils/useCollapse"; 
 
 const About = () => {
-  const { isActive, setIsActive } = useCollapse();
   document.title = "Kasa - À propos de nous";
+  
+  const { activeCollapsibles, toggleCollapse } = useCollapse();
   const dataAbout = [
     {
       title: "Fiabilité",
@@ -43,10 +45,9 @@ const About = () => {
             <Collapse
               key={`${item.title.replace(/[^\w\s]/gi, "").slice(0, 3)}${index}`}
               title={item.title}
-              content=<p>{item.content}</p>
-              index={item.title}
-              isActive={isActive}
-              setIsActive={setIsActive}
+              content={<p>{item.content}</p>} // Mise en place correcte du content
+              isOpen={activeCollapsibles[item.title]} // Vérification si c'est ouvert
+              toggleCollapse={() => toggleCollapse(item.title)} // Toggle du collapsible
             />
           ))}
         </section>
