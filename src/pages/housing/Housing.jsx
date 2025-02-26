@@ -2,19 +2,20 @@ import { useNavigate, useParams } from "react-router-dom";
 import Carrousel from "../../components/Carrousel/Carrousel";
 import Description from "../../components/Description/Description";
 import { useFetch } from "../../utils/useFetch";
+import NotFound from "../notfound/NotFound"; // Importer le composant NotFound
 
 const Housing = () => {
   const { fetchedData, isLoading, error } = useFetch(`/data.json`);
   const { housingId } = useParams();
-  const navigate = useNavigate();
 
   const currentHousing =
     fetchedData && fetchedData.find((item) => item.id === housingId);
-  document.title = `Kasa - ${currentHousing && currentHousing.title}`;
 
-  if (error || !currentHousing) {
-    return navigate("/error");
+  if (!currentHousing) {
+    return <NotFound />; // Utiliser le composant NotFound à la place du message
   }
+
+  document.title = `Kasa - ${currentHousing.title}`;
 
   return (
     <main>

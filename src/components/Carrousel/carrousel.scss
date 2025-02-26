@@ -52,15 +52,10 @@
         font-size: 40px;
       }
 
-      &:hover {
-        color: $red;
-      }
+     
     }
 
-    &:hover {
-      opacity: 1;
-      transform: translateY(-50%) scale(1.1);
-    }
+  
   }
 
   & .wrapper {

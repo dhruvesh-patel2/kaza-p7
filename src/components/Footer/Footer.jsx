@@ -2,8 +2,6 @@ import logoWhite from "/kasa_white.svg";
 import "./footer.scss";
 
 const Footer = () => {
-  const currentYear = new Date().getFullYear();
-
   return (
     <footer>
       <div className="footer_content">
