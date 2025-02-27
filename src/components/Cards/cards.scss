@@ -65,6 +65,16 @@
       left: 20px;
       right: 100px;
       color: $white;
+      text-align: left;
+      display: flex;
+      align-items: flex-start; 
+      justify-content: flex-start;
+      min-height: 3.5em; 
+      line-height: 1.2; 
+      white-space: normal;
+      word-break: break-word;
+      overflow-wrap: break-word;
+    
     }
   }
 
