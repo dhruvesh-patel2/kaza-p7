@@ -70,7 +70,7 @@ const Description = ({ currentHousing }) => {
             <ul>
               {currentHousing.equipments &&
                 currentHousing.equipments.map((equipment, index) => (
-                  <li key={index}>{equipment}</li> // Retirer l'icône fa-check
+                  <li key={index}>{equipment}</li> 
                 ))}
             </ul>
           }
